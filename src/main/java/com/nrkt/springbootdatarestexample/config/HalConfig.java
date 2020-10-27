@@ -9,9 +9,8 @@ import org.springframework.hateoas.mediatype.hal.HalConfiguration;
 public class HalConfig {
     @Bean
     public HalConfiguration globalPolicy() {
-        return new HalConfiguration() //
+        return new HalConfiguration()
                 .withRenderSingleLinks(HalConfiguration.RenderSingleLinks.AS_SINGLE)
-                .withRenderSingleLinksFor( //
-                        LinkRelation.of("self"), HalConfiguration.RenderSingleLinks.AS_ARRAY);
+                .withRenderSingleLinksFor(LinkRelation.of("self"), HalConfiguration.RenderSingleLinks.AS_ARRAY);
     }
 }

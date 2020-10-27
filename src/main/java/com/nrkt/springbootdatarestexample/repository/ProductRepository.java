@@ -7,7 +7,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.util.Optional;
 
-
 @RepositoryRestResource
 public interface ProductRepository extends JpaRepository<Product, Long> {
 

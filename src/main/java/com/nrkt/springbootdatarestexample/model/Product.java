@@ -22,6 +22,7 @@ public class Product extends RepresentationModel<Product> implements Serializabl
 
     @Transient
     @Getter(AccessLevel.NONE)
+    @JsonIgnore
     final List<Link> links;
 
     @Id
@@ -33,8 +34,6 @@ public class Product extends RepresentationModel<Product> implements Serializabl
 
     @NotNull
     Double price;
-
-    Date addedDate;
 
     @JsonIgnore
     @Column(columnDefinition = "boolean default true")
